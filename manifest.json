@@ -1,0 +1,17 @@
+{
+  "name": "地下室系统 - 21世纪荒原狼生存指南",
+  "short_name": "地下室系统",
+  "description": "个人养成管理 · 积木节点 · 数值成长 · 三树系统",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#12100e",
+  "theme_color": "#1a1512",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐺</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

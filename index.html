@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>21世纪荒原狼生存指南 — 地下室系统</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+  <!-- 启动页 -->
+  <div id="splash-screen">
+    <div class="splash-inner">
+      <span class="splash-icon">🏚️</span>
+      <div class="splash-subtitle">B A S E M E N T · S Y S T E M</div>
+      <h1 class="splash-title">欢迎回到地下室</h1>
+      <div class="splash-user">用户 Smmr-1</div>
+      <div class="splash-hint">— 点击任意位置进入 —</div>
+    </div>
+  </div>
+
+  <!-- 主应用 -->
+  <div id="app">
+
+    <!-- 游戏顶部栏 -->
+    <header class="game-header">
+      <div class="gh-left">
+        <button class="gh-menu-btn" id="gh-menu" title="菜单">☰</button>
+        <span class="gh-user-tag">Smmr-1</span>
+      </div>
+      <span class="gh-date-display" id="gh-date">---</span>
+      <div class="gh-right">
+        <span class="gh-level-badge" id="gh-level">Lv.1</span>
+        <span class="gh-exp-text" id="gh-exp">✨ 0/100</span>
+      </div>
+    </header>
+
+    <!-- 主舞台 -->
+    <div class="main-stage">
+
+      <!-- 左侧：看板娘区域 -->
+      <aside class="mascot-zone">
+        <div class="mascot-display">
+          <div class="mascot-sprite" id="mascot-sprite">🐺</div>
+        </div>
+        <div class="mascot-dialog" id="mascot-dialog">
+          <div class="dialog-text" id="dialog-text">新的一天，荒原狼也要好好活下去。</div>
+        </div>
+        <div class="mascot-actions">
+          <button class="ma-btn" id="ma-switch" title="切换角色">🔄 切换</button>
+          <button class="ma-btn" id="ma-talk" title="对话">💬 对话</button>
+        </div>
+      </aside>
+
+      <!-- 右侧：主内容区 -->
+      <main class="content-zone" id="content-zone">
+        <!-- JS 动态填充 -->
+      </main>
+
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav class="game-footer" id="game-footer">
+      <button class="ft-nav-item active" data-action="nav-to" data-view="bedroom">
+        <span class="ft-nav-icon">🏠</span>卧室
+      </button>
+      <button class="ft-nav-item" data-action="nav-to" data-view="computer-room">
+        <span class="ft-nav-icon">🖥️</span>学习
+      </button>
+      <button class="ft-nav-item" data-action="nav-to" data-view="rooms">
+        <span class="ft-nav-icon">🗺️</span>房间
+      </button>
+      <button class="ft-nav-item" data-action="nav-to" data-view="stats-panel">
+        <span class="ft-nav-icon">📊</span>数值
+      </button>
+      <button class="ft-nav-item" data-action="nav-to" data-view="logs">
+        <span class="ft-nav-icon">📋</span>日志
+      </button>
+      <button class="ft-nav-item" data-action="nav-to" data-view="trees">
+        <span class="ft-nav-icon">🌳</span>三树
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Modal overlay -->
+  <div id="modal-overlay" class="hidden"></div>
+
+  <!-- 脚本：按依赖顺序 -->
+  <script src="src/wolf-data.js"></script>
+  <script src="src/wolf-storage.js"></script>
+  <script src="src/wolf-state.js"></script>
+  <script src="src/wolf-views.js"></script>
+  <script src="src/wolf-events.js"></script>
+  <script src="src/wolf-main.js"></script>
+
+</body>
+</html>
